@@ -1,0 +1,26 @@
+{
+  "env": {
+    // https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-environments
+    "browser": true, // browser 上で実行される Javascript を確認する
+    "es2017": true // es8
+  },
+  "extends": "eslint:recommended", // rules で細かく設定しなくていい
+  "parser": "babel-eslint",
+  "parserOptions": {
+    // "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "globals": {
+    "utils": "readonly", // writable
+    "jQuery": "readonly", // writable
+    "$": "readonly"
+  },
+  "rules":{
+    // https://eslint.org/docs/latest/rules/ // eslint:recommended でさらに追加したいものだけ追加する
+    // "no-undef": ["off"],
+    // "semi": ["error", "always", {"omitLastInOneLineBlock": true}]
+    "semi": ["error", "always"],
+    // "semi": ["error", "never"],
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+  }
+}

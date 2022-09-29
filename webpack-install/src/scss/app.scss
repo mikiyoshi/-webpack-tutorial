@@ -1,0 +1,30 @@
+// https://www.npmjs.com/package/autoprefixer
+// ::placeholder {
+//   color: gray;
+// }
+
+h1 {
+  font-size: 2em;
+  transition: all .3s;
+  color: blue;
+
+  &:hover{
+    transform: translateX(50px);
+    color: red;
+  }
+}
+
+.bg {
+  // background-image: url('~@imgs/favicon.png'); // webpack.common..js の resolve で設定
+  background-image: url('~images/favicon.png'); // webpack.common..js の resolve で設定
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+// https://www.npmjs.com/package/autoprefixer
+// @media (min-resolution: 2dppx) {
+//   h1{
+//     color: purple
+//   }
+// }

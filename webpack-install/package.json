@@ -1,0 +1,46 @@
+{
+  "name": "webpack-install",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "_cleanup_": "delete all files from deploy before",
+    "cleanup": "npx rimraf ./public",
+    "dev": "npm run webpack:dev && npm run webpack:server",
+    "_webpack:server_": "'yarn run dev' can start webpack:server and webpack:dev, and this is auto deploy in local server ",
+    "webpack:server": "npx webpack-dev-server --config ./webpack.dev.js",
+    "_dev_": "yarn run webpack --config ./webpack.dev.js // yarn is not common for all, so replaced to npx",
+    "_dev2_": "npm run cleanup && npx webpack --config ./webpack.dev.js  // local command is npx, inside 'scripts' is npm",
+    "_dev3_": "npm run cleanup && npx webpack --config ./webpack.dev.js",
+    "webpack:dev": "npm run cleanup && npx webpack --config ./webpack.dev.js",
+    "build": "npm run cleanup && npx webpack --config ./webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "autoprefixer": "9.7.0",
+    "babel-eslint": "10.0.3",
+    "babel-loader": "8.0.6",
+    "css-loader": "3.2.0",
+    "eslint": "6.6.0",
+    "eslint-loader": "3.0.2",
+    "file-loader": "4.2.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "4.0.0-beta.8",
+    "mini-css-extract-plugin": "0.8.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-loader": "3.0.0",
+    "sass": "^1.55.0",
+    "sass-loader": "8.0.0",
+    "style-loader": "1.0.0",
+    "terser-webpack-plugin": "2.2.1",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0"
+  },
+  "dependencies": {
+    "core-js": "3.1.4",
+    "jquery": "3.4.1",
+    "regenerator-runtime": "0.13.3"
+  }
+}
