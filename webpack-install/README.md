@@ -182,6 +182,8 @@ app.js sub.js の両方に jQuery などの読み込みデータがある場合�
 yarn add webpack-dev-server@3.9.0 --dev
 ```
 
+- package.json
+
 ```
 "dev": "npm run webpack:dev && npm run webpack:server",
 "webpack:server": "npx webpack-dev-server --config ./webpack.dev.js",
